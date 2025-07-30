@@ -30,8 +30,6 @@ font-family: 'Inter', sans-serif;
   object-fit: cover;
 }
 
-/* Menu fixo e centralizado */
-
 .menu-wrapper {
   position: fixed;
   top: 1rem;
@@ -43,7 +41,7 @@ font-family: 'Inter', sans-serif;
   align-items: center;
   justify-content: center;
   
-  background-color: rgba(205, 205, 205, 0.5); /* fundo translúcido */
+  background-color: rgba(205, 205, 205, 0.4); /* fundo translúcido */
   backdrop-filter: blur(20px);                   /* efeito blur no fundo */
   -webkit-backdrop-filter: blur(10px);           /* para Safari */
   
@@ -54,6 +52,8 @@ font-family: 'Inter', sans-serif;
   overflow: hidden;
   color: #000; /* se precisar ajustar a cor do texto */
 }
+
+
 
 .menu-scroll {
   overflow-x: auto;
