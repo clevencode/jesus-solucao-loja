@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minha Loja</title>
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papjpCylY3pGQKZwQvT9uRhJbo1TGiQeZgJhHItKnzGl4VXL6TxJjZ9Rg6+zjqzKg9Ro43G2I+CtCvzXJ1Cw4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Menu de navegação -->
+  <nav class="menu-wrapper">
+    <button class="nav-btn left" aria-label="Anterior">&#10094;</button>
+
+    <nav class="menu-scroll">
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#quem-somos">Quem somos</a></li>
+        <li><a href="#historia">História</a></li>
+        <li><a href="#service">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-btn right" aria-label="Próximo">&#10095;</button>
+  </nav>
+
+  <!-- Banner -->
+  <header class="banner">
+    <img src="w.jpg" alt="Banner da loja" />
+  </header>
+
+  <!-- Seções -->
+  <section id="inicio" class="secao">
+    <h2>Bem-vindo à Loja Exemplo</h2>
+    <p>Oferecemos produtos de qualidade com atendimento próximo e humano. Explore nosso site para saber mais sobre nossa loja e valores!</p>
+  </section>
+
+  <section id="quem-somos" class="secao">
+    <h2>Quem somos</h2>
+    <p>Somos uma equipe apaixonada pelo que faz, dedicada a oferecer produtos que atendem às necessidades dos nossos clientes, com ética, compromisso e carinho.</p>
+  </section>
+
+  <section id="historia" class="secao">
+    <h2>Nossa História</h2>
+    <p>A Loja Exemplo nasceu do sonho de uma família empreendedora em compartilhar sua paixão pela moda com a comunidade. Desde 2018, conquistamos clientes fiéis com atendimento acolhedor e produtos escolhidos com carinho.</p>
+  </section>
+
+  <section id="service" class="secao">
+    <h2>Serviços</h2>
+    <p>Oferecemos consultoria de moda, entrega em domicílio, provador personalizado e atendimento via WhatsApp para sua comodidade.</p>
+  </section>
+  
+    <section id="contato" class="secao">
+    <h2>Contato</h2>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/55SEUNUMERO">(55) 99999-9999</a></p>
+    <p><strong>Email:</strong> loja@exemplo.com</p>
+    <p><strong>Endereço:</strong> Rua Exemplo, 123 - Encantado, RS</p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/lojaexemplo">@lojaexemplo</a></p>
+  </section>
+
+  <!-- JS para scroll suave e rolagem do menu -->
+  <script>
+    const scrollContainer = document.querySelector('.menu-scroll');
+    const leftBtn = document.querySelector('.nav-btn.left');
+    const rightBtn = document.querySelector('.nav-btn.right');
+
+    function updateNavButtons() {
+      const scrollLeft = scrollContainer.scrollLeft;
+      const scrollWidth = scrollContainer.scrollWidth;
+      const clientWidth = scrollContainer.clientWidth;
+
+      if (scrollLeft > 0) {
+        leftBtn.classList.add('visible');
+      } else {
+        leftBtn.classList.remove('visible');
+      }
+
+      if (scrollLeft + clientWidth < scrollWidth - 1) {
+        rightBtn.classList.add('visible');
+      } else {
+        rightBtn.classList.remove('visible');
+      }
+    }
+
+    leftBtn.addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: -100, behavior: 'smooth' });
+    });
+
+    rightBtn.addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: 100, behavior: 'smooth' });
+    });
+
+    scrollContainer.addEventListener('scroll', updateNavButtons);
+    window.addEventListener('resize', updateNavButtons);
+    window.addEventListener('load', updateNavButtons);
+
+    // Scroll suave com ajuste de 50% do nav-bar
+    document.querySelectorAll('.menu li a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+
+        const navbarHeight = document.querySelector('.menu-wrapper').offsetHeight;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+
+        window.scrollTo({
+          top: targetPosition - (navbarHeight / 2),
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
