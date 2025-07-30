@@ -31,9 +31,10 @@ font-family: 'Inter', sans-serif;
 }
 
 /* Menu fixo e centralizado */
+
 .menu-wrapper {
   position: fixed;
-  top: 1rem;                      /* espaço do topo da página */
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
@@ -41,15 +42,18 @@ font-family: 'Inter', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #aaa;
+  
+  background-color: rgba(205, 205, 205, 0.5); /* fundo translúcido */
+  backdrop-filter: blur(20px);                   /* efeito blur no fundo */
+  -webkit-backdrop-filter: blur(10px);           /* para Safari */
+  
   border-radius: 999px;
   padding: 0.3rem 0.5rem;
   width: 90%;
   max-width: 600px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: #000; /* se precisar ajustar a cor do texto */
 }
-
 
 .menu-scroll {
   overflow-x: auto;
