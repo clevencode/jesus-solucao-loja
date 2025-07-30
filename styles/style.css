@@ -1,6 +1,6 @@
 body {
 font-family: 'Inter', sans-serif;
-  background-color: #f7f7f7;
+  background-color: hsla(0, 5%, 90%, 0.914);
   padding: 0;
   position: relative;
   margin: 0 1rem 0;
@@ -30,10 +30,9 @@ font-family: 'Inter', sans-serif;
   object-fit: cover;
 }
 
-/* Menu fixo e centralizado */
 .menu-wrapper {
   position: fixed;
-  top: 1rem;                      /* espaço do topo da página */
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
@@ -41,14 +40,19 @@ font-family: 'Inter', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #aaa;
+  
+  background-color: hsla(0, 0%, 95%, 0.7); /* fundo translúcido */
+  backdrop-filter: blur(30px);                   /* efeito blur no fundo */
+
+
   border-radius: 999px;
   padding: 0.3rem 0.5rem;
   width: 90%;
   max-width: 600px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: #000; /* se precisar ajustar a cor do texto */
 }
+
 
 
 .menu-scroll {
@@ -67,19 +71,39 @@ font-family: 'Inter', sans-serif;
 }
 
 .menu li a {
-  text-decoration: none;
+  position: relative;
   color: #000;
+  text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size:  0% 1px;  /* começa com 0% de largura */
+  background-repeat: no-repeat;
+  background-position: 0 100%; /* posiciona na parte de baixo */
+
+  transition: background-size 0.6s ease;
 }
+
+.menu li a:hover,
+.menu li a.active {
+  background-size: 100% 1.5px; /* expande para 100% de largura */
+}
+
+
 
 .nav-btn {
   background: none;
   border: none;
-  color: #222;
-  font-size: 1rem;
-  padding: 0.3rem 0.6rem;
   cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.material-icons {
+  font-size: 24px;
+  color: #000; /* Ajuste a cor conforme seu design */
 }
 
 .menu-scroll {
@@ -102,7 +126,6 @@ font-family: 'Inter', sans-serif;
   visibility: visible;
   opacity: 1;
 }
-
 
 .secao {
   margin: 4rem auto;
