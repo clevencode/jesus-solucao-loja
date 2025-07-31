@@ -1,10 +1,11 @@
 body {
-font-family: 'Inter', sans-serif;
-  background-color: hsla(0, 5%, 90%, 0.914);
+  font-family: 'Noto Sans', sans-serif;
+  background: linear-gradient(135deg, #302920 0%, #000000 100%);
   padding: 0;
   position: relative;
   margin: 0 1rem 0;
 }
+
 
 
 /* Banner */
@@ -41,12 +42,12 @@ font-family: 'Inter', sans-serif;
   align-items: center;
   justify-content: center;
   
-  background-color: hsla(0, 0%, 95%, 0.7); /* fundo translúcido */
-  backdrop-filter: blur(30px);                   /* efeito blur no fundo */
+ background-color: hsla(40, 40%, 85%, 0.6); /* bege claro, translúcido */
+  backdrop-filter: blur(20px);             /* blur para efeito glassmorphism */
+  -webkit-backdrop-filter: blur(20px); 
 
 
   border-radius: 999px;
-  padding: 0.3rem 0.5rem;
   width: 90%;
   max-width: 600px;
   overflow: hidden;
@@ -86,6 +87,7 @@ font-family: 'Inter', sans-serif;
 
 .menu li a:hover,
 .menu li a.active {
+  
   background-size: 100% 1.5px; /* expande para 100% de largura */
 }
 
@@ -130,10 +132,11 @@ font-family: 'Inter', sans-serif;
 .secao {
   margin: 4rem auto;
   padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #fef8f0 0%, #e7d8c9 100%);
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
+
 
 .secao h2 {
   margin-bottom: 1rem;
@@ -145,3 +148,10 @@ font-family: 'Inter', sans-serif;
   color: #444;
 }
 
+footer {
+  display: none;
+  text-align: center;
+  padding: 10px;
+  color: #8a8a8a;
+  font-size: 0.9rem;
+}
