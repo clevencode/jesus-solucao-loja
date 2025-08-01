@@ -12,7 +12,7 @@ body {
 .banner {
   background-color: transparent;
   border-radius: 15px;
-  margin: 4rem auto 0;
+  margin: 2rem auto 0;
   text-align: center;
   z-index: 1;
 }
@@ -65,25 +65,12 @@ body {
 .menu {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
   white-space: nowrap;
   padding: 0.5rem 1rem;
   margin: 0;
 }
 
-.menu li a {
-  position: relative;
-  color: #000;
-  text-decoration: none;
-  font-weight: 500;
 
-  background-image: linear-gradient(currentColor, currentColor);
-  background-size:  0% 1px;  /* começa com 0% de largura */
-  background-repeat: no-repeat;
-  background-position: 0 100%; /* posiciona na parte de baixo */
-
-  transition: background-size 0.6s ease;
-}
 
 .menu li a:hover,
 .menu li a.active {
@@ -91,6 +78,36 @@ body {
   background-size: 100% 1.5px; /* expande para 100% de largura */
 }
 
+.menu li {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.menu li a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1.1px;
+  border-radius: 1px;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.menu li a.active::after {
+  transform: scaleX(1);
+}
 
 
 .nav-btn {
@@ -129,9 +146,29 @@ body {
   opacity: 1;
 }
 
+.nav-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-buttons button:hover {
+  background: #555;
+}
+
 .secao {
   margin: 4rem auto;
   padding: 2rem;
+  max-width: 80%;
   background: linear-gradient(135deg, #fef8f0 0%, #e7d8c9 100%);
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
@@ -148,10 +185,86 @@ body {
   color: #444;
 }
 
+#contato p {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+#contato i {
+  margin-right: 0.5rem;
+  color: #232323; /* WhatsApp verde, pode ajustar */
+}
+
+#contato a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#contato a:hover {
+  text-decoration: underline;
+}
+
+
+hr {
+  height: 2px;
+  border: none;
+  background: #2c2c2c;
+  border-radius: 30px;
+  margin: 1rem 0;
+}
+
+
 footer {
-  display: none;
   text-align: center;
   padding: 10px;
-  color: #8a8a8a;
+  color: #2c2c2c;
   font-size: 0.9rem;
 }
+
+
+  #quem-somos {
+    max-width: 600px;
+    margin: 2rem auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background: #fefefe;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+  }
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 180px;
+  }
+  .slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  .slide.active {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+  }
+  .nav-buttons {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .nav-buttons button {
+    background: NONE;
+    color: white;
+    border-radius: 50%;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  .nav-buttons button:hover {
+   cursor: POINTER;
+  }

@@ -41,44 +41,69 @@
   </button>
 </nav>
 
- 
-  <!-- Banner -->
-  <header class="banner">
-    <img src="images/w.jpg" alt="Banner da loja" />
-  </header>
-  <!-- Seções -->
-  <section id="inicio" class="secao">
-    <h2>Bem-vindo à Loja Exemplo</h2>
-    <p>Oferecemos produtos de qualidade com atendimento próximo e humano. Explore nosso site para saber mais sobre nossa loja e valores!</p>
-  </section>
 
-  <section id="quem-somos" class="secao">
-    <h2>Quem somos</h2>
-    <p>Somos uma equipe apaixonada pelo que faz, dedicada a oferecer produtos que atendem às necessidades dos nossos clientes, com ética, compromisso e carinho.</p>
-  </section>
 
-  <section id="historia" class="secao">
-    <h2>Nossa História</h2>
-    <p>A Loja Exemplo nasceu do sonho de uma família empreendedora em compartilhar sua paixão pela moda com a comunidade. Desde 2018, conquistamos clientes fiéis com atendimento acolhedor e produtos escolhidos com carinho.</p>
-  </section>
+<!-- Banner -->
+<header class="banner">
+  <img src="images/w.jpg" alt="Banner da loja" />
+</header>
+<!-- Seções -->
+<section id="inicio" class="secao">
+  <h2>Bem-vindo à Loja Exemplo</h2>
+  <p>Oferecemos produtos de qualidade com atendimento próximo e humano. Explore nosso site para saber mais sobre nossa loja e valores!</p>
+</section>
 
-  <section id="service" class="secao">
-    <h2>Serviços</h2>
-    <p>Oferecemos consultoria de moda, entrega em domicílio, provador personalizado e atendimento via WhatsApp para sua comodidade.</p>
-  </section>
+<section id="quem-somos" class="secao">
+  <div class="slider-container">
+    <div class="slide active">
+      <h2>Quem somos</h2>
+      <p>Somos uma equipe apaixonada pelo que faz, dedicada a oferecer produtos que atendem às necessidades dos nossos clientes, com ética, compromisso e carinho.</p>
+    </div>
+    <div class="slide">
+      <h2>Valores</h2>
+      <p>Valorizamos integridade, inovação e respeito, buscando sempre o melhor para nossos clientes e colaboradores.</p>
+    </div>
+    <div class="slide">
+      <h2>Visão</h2>
+      <p>Ser referência no mercado, entregando soluções que transformem vidas e inspirem confiança e qualidade.</p>
+    </div>
+  </div>
   
-    <section id="contato" class="secao">
-    <h2>Contato</h2>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/55SEUNUMERO">(55) 99999-9999</a></p>
-    <p><strong>Email:</strong> loja@exemplo.com</p>
-    <p><strong>Endereço:</strong> Rua Exemplo, 123 - Encantado, RS</p>
-    <p><strong>Instagram:</strong> <a href="https://instagram.com/lojaexemplo">@lojaexemplo</a></p>
-  </section>
+  <div class="nav-buttons">
+    <button id="prevBtn"><span class="material-icons">arrow_left</span></button>
+    <button id="nextBtn"><span class="material-icons">arrow_right</span></button>
+  </div>
+</section>
 
-  
-  <script src="scripts/script.js"></script>
+<section id="historia" class="secao">
+  <h2>Nossa História</h2>
+  <p>A Loja Exemplo nasceu do sonho de uma família empreendedora em compartilhar sua paixão pela moda com a comunidade. Desde 2018, conquistamos clientes fiéis com atendimento acolhedor e produtos escolhidos com carinho.</p>
+</section>
 
-  <footer>
+<section id="service" class="secao">
+  <h2>Serviços</h2>
+  <p>Oferecemos consultoria de moda, entrega em domicílio, provador personalizado e atendimento via WhatsApp para sua comodidade.</p>
+</section>
+
+<!-- Inclua o Font Awesome no <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<section id="contato" class="secao">
+  <h2>Contato</h2>
+
+  <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/55SEUNUMERO">(55) 99999-9999</a></p>
+
+  <p><i class="fas fa-envelope"></i> loja@exemplo.com</p>
+
+  <p><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - Encantado, RS</p>
+
+  <p><i class="fab fa-instagram"></i> <a href="https://instagram.com/lojaexemplo">@lojaexemplo</a></p>
+</section>
+
+
+<script src="scripts/script.js"></script>
+<hr>
+<footer>
   <p>&copy; 2025 Todos os direitos reservados. Desenvolvido por clevencode.</p>
 </footer>
 
