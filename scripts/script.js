@@ -75,3 +75,33 @@
     }
   });
 });
+
+const slides = document.querySelectorAll('#quem-somos .slide');
+const nextBtn = document.getElementById('nextBtn');
+let currentIndex = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+    slide.style.display = i === index ? 'block' : 'none';
+  });
+
+  // Opcional: mudar ícone se for o último
+  if (index === slides.length - 1) {
+    nextBtn.innerHTML = '<span class="material-icons">keyboard_double_arrow_left</span>';
+  } else {
+    nextBtn.innerHTML = '<span class="material-icons">keyboard_double_arrow_right</span>';
+  }
+}
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+});
+
+showSlide(currentIndex);
+
+
+
+  // Inicializa com o primeiro slide
+  showSlide(currentIndex);
