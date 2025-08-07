@@ -176,6 +176,8 @@ body {
   justify-content: center;
   transition: transform 0.3s ease;
   text-decoration: none;
+  right: 225px;
+  bottom: 28px;
 }
 
 
