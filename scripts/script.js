@@ -76,7 +76,7 @@
   });
 });
 
-const slides = document.querySelectorAll('#quem-somos .slide');
+const slides = document.querySelectorAll('.secao .slide');
 const nextBtn = document.getElementById('nextBtn');
 let currentIndex = 0;
 
