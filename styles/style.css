@@ -81,6 +81,20 @@ body {
 .pagamentos {
   color: #D8352F;
 }
+ ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li {
+    margin-bottom: 6px;
+  }
+
+  .material-icons {
+    vertical-align: middle;
+    margin-right: 6px;
+  }
 
 /* Botões de navegação */
 .nav-btn {
