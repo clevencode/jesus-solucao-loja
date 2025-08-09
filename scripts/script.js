@@ -102,6 +102,36 @@ nextBtn.addEventListener('click', () => {
 showSlide(currentIndex);
 
 
+// Fullscreen: solicita tela cheia no container (ou sai dela)
+  (function () {
+    const btn = document.getElementById('mapFullscreenBtn');
+    const wrapper = document.getElementById('mapWrapper');
 
+    btn.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        if (wrapper.requestFullscreen) {
+          wrapper.requestFullscreen();
+        } else if (wrapper.webkitRequestFullscreen) { /* Safari */
+          wrapper.webkitRequestFullscreen();
+        } else {
+          // fallback: abrir mapa em nova aba
+          const iframe = document.getElementById('mapIframe');
+          window.open(iframe.src, '_blank', 'noopener');
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
+      }
+    });
+
+    // Melhorar acessibilidade: tecla Enter/Space ativa o botão
+    btn.addEventListener('keyup', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') btn.click();
+    });
+  })();
+  
   // Inicializa com o primeiro slide
   showSlide(currentIndex);

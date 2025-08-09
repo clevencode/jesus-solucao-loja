@@ -21,34 +21,31 @@
   <!-- Estilos -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
 
   <!-- Menu de navegação -->
-  <div class="menu-wrapper">
+  <nav class="menu-wrapper">
     <button class="nav-btn left" aria-label="Anterior">
       <span class="material-icons">arrow_left</span>
     </button>
-
     <div class="menu-scroll">
       <ul class="menu">
-        <li><a href="#inicio" class="active">Início</a></li>
+        <li><a href="#inicio" class="active">Home</a></li>
         <li><a href="#quem-somos">Quem somos</a></li>
         <li><a href="#historia">História</a></li>
         <li><a href="#service">Serviços</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </div>
-
     <button class="nav-btn right" aria-label="Próximo">
       <span class="material-icons">arrow_right</span>
     </button>
-  </div>
+  </nav>
 
   <!-- Seção Início -->
   <section id="inicio" class="secao">
     <h2>Loja Jesus é a Solução</h2>
-    <p>Bem vindos ao nosso site! Temos produtos de limpeza, higiene e cosméticos, passa lá na nossa loja para saber mais. </p>
+    <p>Bem vindos! Explore nosso site para descobrir mais sobre a loja.</p>
 
     <h3>Horários</h3>
     <p>Segunda - Sexta: <strong>9:00</strong> às <strong>18:30</strong></p>
@@ -70,7 +67,11 @@
     </ul>
 
     <h3>Endereço</h3>
-    <p><i class="fas fa-map-marker-alt"></i> R. Eduardo Satler, 1830 - Centro, Encantado - RS, 95960-000</p>
+    <p>
+      <i class="fas fa-map-marker-alt"></i>
+      R. Eduardo Satler, 1830 - Centro, Encantado - RS, 95960-000
+      <a href="#contato" class="btn-map" aria-label="Ir para a seção de Contato">Ver no mapa</a>
+    </p>
   </section>
 
   <!-- Seção Quem Somos -->
@@ -82,14 +83,17 @@
       </div>
       <div class="slide" id="subsecao2">
         <h2>Nossa Missão</h2>
-        <p>Vender produtos de qualidade, com atendimento humano.</p>
+        <p>Vender produtos de qualidade, com atendimento presencial.</p>
       </div>
       <div class="slide" id="subsecao3">
+        <h2>Nossa Visão</h2>
+        <p>Contribuir no desenvolvimento regional oferecendo um bom serviço.</p>
+      </div>
+      <div class="slide" id="subsecao4">
         <h2>Nossos Valores</h2>
         <p>Fazer negócios com foco em qualidade.</p>
       </div>
     </div>
-
     <div class="nav-buttons">
       <button id="nextBtn"><span class="material-icons">navigate_next</span></button>
     </div>
@@ -104,9 +108,7 @@
   <!-- Seção Serviços -->
   <section id="service" class="secao">
     <h2>Serviços</h2>
-
     <div class="service-subcontainer">
-
       <div class="service-item">
         <div class="service-img">
           <span class="material-icons" style="font-size:50px;">print</span>
@@ -116,7 +118,6 @@
           <p>Realizamos serviços de impressão de documentos.</p>
         </div>
       </div>
-
       <div class="service-item">
         <div class="service-img">
           <span class="material-icons" style="font-size:50px;">attach_money</span>
@@ -126,27 +127,45 @@
           <p>Facilitamos transferências internacionais de dinheiro de forma rápida, segura e confiável.</p>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- Seção Contato -->
   <section id="contato" class="secao">
     <h2>Contato</h2>
-    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5551982594853" target="_blank">(51) 98259-4853</a></p>
-    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5551982594853" target="_blank">(51) 98259-4853</a></p>
-
-      <!-- Botão flutuante do WhatsApp -->
+    <p>
+      <i class="fab fa-whatsapp"></i>
+     (51) 992899152</a>
+    </p>
+    <p>
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:Npetersjean@gmail.com.com">Npetersjean@gmail.com</a>
+    </p>
+    <!-- Botão flutuante do WhatsApp -->
     <a href="https://wa.me/5551982594853" class="whatsapp-float" target="_blank" aria-label="Converse pelo WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
-
-
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3481.507182424606!2d-51.86872628079365!3d-29.238047014373855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c5b272215b6dd%3A0xdffebaf0a82d2de6!2sR.%20Eduardo%20Satler%2C%201830%20-%20Centro%2C%20Encantado%20-%20RS%2C%2095960-000!5e0!3m2!1spt-BR!2sbr!4v1754517602425!5m2!1spt-BR!2sbr" 
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    <div class="map-wrapper" id="mapWrapper">
+      <div class="map-fallback" aria-hidden="true"></div>
+      <iframe
+        id="mapIframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3481.507182424606!2d-51.86872628079365!3d-29.238047014373855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c5b272215b6dd%3A0xdffebaf0a82d2de6!2sR.%20Eduardo%20Satler%2C%201830%20-%20Centro%2C%20Encantado%20-%20RS%2C%2095960-000!5e0!3m2!1spt-BR!2sbr!4v1754517602425!5m2!1spt-BR!2sbr"
+        loading="lazy"
+        title="Mapa: Rua Eduardo Satler, 1830 — Encantado, RS"
+        aria-label="Mapa do endereço Rua Eduardo Satler, 1830 — Encantado, Rio Grande do Sul"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
       </iframe>
+      <div class="map-actions" role="group" aria-label="Ações do mapa">
+        <button
+          type="button"
+          class="btn icon"
+          id="mapFullscreenBtn"
+          aria-controls="mapWrapper"
+          aria-label="Alternar tela cheia do mapa">
+          ⤢
+        </button>
+      </div>
     </div>
   </section>
 
