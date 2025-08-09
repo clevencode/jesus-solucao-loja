@@ -4,9 +4,7 @@ body {
   color: #222;
   margin: 0;
   padding: 0 1rem;
-  position: relative;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* Menu fixo estilo glassmorphism */
@@ -326,7 +324,7 @@ footer {
   font-size: 17px;
   border: none;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   text-decoration: none;
   color: #1E3F8C;
