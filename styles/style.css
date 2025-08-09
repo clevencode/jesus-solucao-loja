@@ -308,12 +308,14 @@ footer {
 /* Ações (botões) sobre o mapa */
 .map-actions {
   position: absolute;
-  left: 15%;
   bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: left;
+  justify-content: center;
   z-index: 10;
 }
+
 .map-actions .btn {
   background: transparent;
   backdrop-filter: blur(20px);
