@@ -258,7 +258,6 @@ footer {
   align-items: center;
   border-radius: 50%;
   background: hsla(142, 70%, 60%, 0.9); /* vidro claro */
-  padding: 0.1rem;
   font-size: 30px;
   color: #1E3F8C;
 
@@ -291,11 +290,7 @@ footer {
   box-sizing: border-box;
   box-shadow: 0 0px 50px rgba(0,0,0,0.2);
 }
-/* Fallback para navegadores que não suportam aspect-ratio */
-.map-wrapper .map-fallback {
-  display: none;
-  padding-top: 56.25%;
-}
+
 @supports not (aspect-ratio: 1/1) {
   .map-wrapper {
     height: 0;
