@@ -76,5 +76,5 @@ O aluno manteve o foco na qualidade, o que resultou em um projeto bem executado 
 *(Inserir imagem do site em funcionamento)*
 
 ```markdown
-![Screenshot do site](./loja.png)
+![Screenshot do site](images\loja.png)
 ```
