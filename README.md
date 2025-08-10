@@ -68,13 +68,3 @@ Após o preenchimento de um formulário, foram coletadas as informações necess
 
 O projeto foi concluído com sucesso, deixando sua marca em uma pequena loja de Encantado, RS. O feedback positivo do proprietário reforça o papel da instituição de ensino como agente de mudança.
 O aluno manteve o foco na qualidade, o que resultou em um projeto bem executado e inspirador para seguir estudando e contribuindo para a sociedade.
-
----
-
-## **Captura de Tela**
-
-*(Inserir imagem do site em funcionamento)*
-
-```markdown
-![Screenshot do site](images\loja.png)
-```
